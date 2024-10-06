@@ -15,6 +15,7 @@ namespace MovieList
 
         public IConfiguration Configuration { get; }
 
+        // Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRouting(options => {
@@ -29,6 +30,7 @@ namespace MovieList
                     Configuration.GetConnectionString("MovieContext")));
         }
 
+        // Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app)
         {
             app.UseDeveloperExceptionPage();

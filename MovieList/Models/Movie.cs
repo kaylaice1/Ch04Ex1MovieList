@@ -8,7 +8,7 @@ namespace MovieList.Models
         public int MovieId { get; set; }
 
         [Required(ErrorMessage = "Please enter a name.")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [Required(ErrorMessage = "Please enter a year.")]
         [Range(1889, 2999, ErrorMessage = "Year must be after 1889.")]
@@ -19,8 +19,8 @@ namespace MovieList.Models
         public int? Rating { get; set; }
 
         [Required(ErrorMessage = "Please enter a genre.")]
-        public string GenreId { get; set; }
-        public Genre Genre { get; set; }
+        public string? GenreId { get; set; }
+        public Genre? Genre { get; set; }
 
         public string Slug =>
             Name?.Replace(' ', '-').ToLower() + '-' + Year?.ToString();
