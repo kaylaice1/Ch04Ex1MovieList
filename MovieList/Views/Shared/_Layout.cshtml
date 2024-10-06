@@ -1,18 +1,17 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData.title</title>
-    <link rel="stylesheet" type="text/css" 
-          href="~/lib/bootstrap/css/bootstrap.min.css" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" type="text/css"
+          href="~/lib/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container">
         <header class="jumbotron">
             <h1>My Movies</h1>
-        </header>"
-            @RenderBody()
+        </header>
+        @RenderBody()
     </div>
 </body>
 </html>
